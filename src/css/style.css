@@ -116,3 +116,103 @@
 ul.navbar-nav {
     margin-right: auto;
 }
+
+/* قسم عرض الشرائح*/
+
+#carousel-featured {
+    background-color: #f7fbf3;
+    height: 400px;
+    padding-top: 25px;
+
+
+
+}
+#carousel-featured .carousel-item img {
+    height: 375px;
+}
+
+#carousel-featured .broduct-details {
+    border: 1px solid #ddddd8;
+    padding: 20px;
+    position: relative;
+    top: 50px;
+    height: 200px;
+    background-color: #f7fbf3;
+}
+#carousel-featured .broduct-details .broduct-category {
+    border: 1px solid #ddddd8;
+    padding: 10px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #f7fbf3;
+}
+#carousel-featured .broduct-details h1 {
+    font-weight: 700;
+    font-size: 175%;
+    margin-top: 18px;
+
+}
+.custom-btn-outline-warning {
+    background-color: transparent;
+    border-color: #f8ad47;
+    color: #f8ad47;
+}
+
+.custom-btn-outline-warning:hover,
+.custom-btn-outline-warning:active,
+.custom-btn-outline-warning:focus,
+.custom-btn-outline-warning:active:focus,
+.custom-btn-outline-warning:active:hover {
+    border-color: #b86d07;
+    color: #b86d07;
+}
+
+
+.sale {
+    background-color: #35cdc7;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+
+}
+.sale.large {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: -15px;
+    top: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 130%;
+    padding: 35px;
+    line-height: 90%;
+    flex-direction: column;
+    transform: rotate(-25deg);
+}
+
+.custom-indicators-primary {
+    top: 235px;
+    right: 41%;
+}
+
+.custom-carousel-indicators-primary {
+    height: 70px !important;
+    width: 70px !important;
+    opacity: 1 !important; 
+    border: 2px solid #ddddd8 !important; 
+    margin: 0 !important;  
+    margin-left: 5px !important;
+}
+.custom-carousel-indicators-primary.active {
+    border-color: #f8ad47 !important;
+
+
+}
+
+#carousel-featured .carousel-control-prev .fa-chevron-right,
+#carousel-featured .carousel-control-next .fa-chevron-left {
+    color: #868686;
+    font-size: 38px;
+}
