@@ -62,14 +62,120 @@ function calculateTotalPrice() {
     document.getElementById('total-price-for-all-product').innerHTML = totalPriceForAllProduct + '$'
 }
 
+// -----أختيار المدينة ------
+
+ const citiesByCountry = {
+     sa:['جده','الرياض'],
+     eg:['القاهرة','الاسكندرية'],
+     jo:['الاردنية','عمان'],
+     lb:['ليبيا','طرابلس'],
+     rq:['الكوفة','البصرة'],
+ }
+
+ document.querySelectorAll('select[name="country"]').forEach(item => {
+     item.addEventListener('change', () => {
+         const country = item.value
+
+         const cities = citiesByCountry[country]
+
+         document.querySelectorAll('#paymentcities option').forEach(Option => Option.remove())
+
+         const firstOption = document.createElement('option')
+         const optionText = document.createTextNode('اختر المدينة')
+         firstOption.appendChild(optionText)
+         firstOption.setAttribute('value', '')
+         firstOption.setAttribute('disabled', 'true')
+         firstOption.setAttribute('selected', 'true')
+
+         const city_options = document.getElementById('paymentcities')
+         city_options.appendChild(firstOption)
+
+         cities.forEach(city => {
+             const newOption = document.createElement('option')
+             const optionText = document.createTextNode(city)
+             newOption.appendChild(optionText)
+             newOption.setAttribute('value', city)
+             city_options.appendChild(newOption)
+         })
+     })
+ })
+
+//  ------ الدفع عند الاستلام -----
+
+document.querySelectorAll('#form-checkout input[name="payment-method"]').forEach(item => {
+    item.addEventListener('change', () => {
+        const paymentMethod = item.value;
+
+        const creditCardInputs = document.querySelectorAll('#credit_card_info input');
+
+        if(paymentMethod === 'on_delivery') {
+            creditCardInputs.forEach(input => {
+                input.style.display='none'
+            })
+        } else {
+             creditCardInputs.forEach(input => {
+                input.style.display='block'
+        })
+    }
+})
+})
+
+// document.querySelectorAll('#form-checkout input[name="payment-method"]').forEach(item => {
+//     item.addEventListener('change', () => {
+//         const paymentMethod = item.value;
+
+//         const creditCardInputs = document.querySelectorAll('#credit_card_info input');
+
+//         if(paymentMethod === 'on_delivery') {
+//             creditCardInputs.forEach(input => {
+//                 input.style.display='none'
+//             })
+//         } else {
+//             creditCardInputs.forEach(input => {
+//                 input.style.display='block'
+//             })
+//         }
+//     })
+// })
+
+
+
+// const citiesByCountry = {
+//     sa: ['جدة', 'الرياض'],
+//     eg: ['القاهرة', 'الإسكندرية'],
+//     jo: ['عمان', 'الزرقاء'],
+//     sy: ['دمشق', 'حلب', 'حماه']
+// }
+
+// document.querySelectorAll('select[name="country"]').forEach(item => {
+//     item.addEventListener('change', () => {
+//         const country = item.value
+
+//         const cities = citiesByCountry[country]
+
+//         document.querySelectorAll('#paymentcities option').forEach(option => option.remove())
+
+//         const firstOption = document.createElement('option')
+//         const optionText = document.createTextNode('اختر المدينة')
+//         firstOption.appendChild(optionText)
+//         firstOption.setAttribute('value', '')
+//         firstOption.setAttribute('disabled', 'true')
+//         firstOption.setAttribute('selected', 'true')
+
+//         const city_options = document.getElementById('paymentcities')
+//         city_options.appendChild(firstOption)
+
+//         cities.forEach(city => {
+//             const newOption = document.createElement('option')
+//             const optionText = document.createTextNode(city)
+//             newOption.appendChild(optionText)
+//             newOption.setAttribute('value', city)
+//             city_options.appendChild(newOption)
+//         })
+//     })
+// })
 
 
 document.getElementById("copyright").innerHTML = "جميع الحقوق محفوظة" + new Date().getFullYear();
-// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 
-
-console.log("أهلا بكم في متجر عربي")
-
-console.log("أهلا بكم في اكادمية حسوب")

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عربة الشراء</title>
+    <title>صفحة الدفع</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -95,24 +95,110 @@
                 </div>
             </nav>
         </div>
-
         <div class="container">
-            <div class="container">
+                     <!-- بداية القائمة الفرعية -->
             <div class="row" aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb custom-breadcrumb">
                     <li class="breadcrumb-item">
                         <a href="./index.html">الصفحة الرئيسية</a>
                     </li>
-                    <li class="breadcrumb-item active">
-                        عربة الشراء 
+                    <li class="breadcrumb-item">
+                        <a href="checkout.html">عربة الشراء</a>
+                    </li>
+                    <li class="breadcrumb-item active" >
+                       صفحة الدفع
                     </li>
                 </ol>
             </div>
-        </div>
-        <div class="borders-between">
+        <!-- نهاية القائمة الفرعية  -->
+
+        <!-- بداية الفورم لصفحة الدفع -->
+         <form id="form-checkout">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="heading">
+                        البيانات الشخصية
+                    </h3>
                     <div class="row">
-            <h1 class="heading custom-heading ">عربة الشراء </h1>
-            <form action="./payment.html" id="form-control">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control custom-form-control custom-input-details" placeholder="الاسم الاول" name="first-name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control custom-form-control custom-input-details" placeholder="الاسم الاخير" name="last-name" required>                            
+                        </div>
+                        <div class="col-md-6 mb-3">
+                         <input type="email"  class="form-control custom-form-control custom-input-details" name="email" placeholder="البريد الالكتروني" required>   
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="email"  class="form-control custom-form-control custom-input-details" name="area" placeholder="المنطقة" required>  
+                        </div>
+                        <div class="col-md-6 mb-3">
+                           <select name="country" class="custom-form-control custom-input-details" required>
+                            <option disabled selected value="">اختر دولة</option>
+                            <option value="sa">السعودية</option>
+                            <option value="eg">مصر</option>
+                            <option value="rq">العراق</option>
+                            <option value="lb">ليبيا</option>
+                            <option value="jo">الاردن</option>
+                           </select> 
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <select name="city"  class="custom-form-control custom-input-details" id="paymentcities"  required>
+                            <option disabled selected value="">اختر المدينة</option>
+                            
+                           </select> 
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="text"  class="form-control custom-form-control custom-input-details" name="nmber" placeholder="رقم الجوال" required>  
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="text"  class="form-control custom-form-control custom-input-details" name="text" placeholder="العنوان الاول" required>  
+                        </div>
+                        <div class="col-md-6 mb-3">
+                           <input type="text"  class="form-control custom-form-control custom-input-details" name="text" placeholder="العنوان الثاني (اختياري)" required> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="heading">بيانات الدفع </h3>            
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="font-weight-bold">
+                                
+                                <input type="radio" name="payment-method" value="credit-card" checked>
+                                بطاقة ائتمانية
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="font-weight-bold">
+                                <input type="radio" name="payment-method" value="on_delivery" >
+                            الدفع عند التسليم
+                            </label>
+                    </div>
+                    </div>
+
+                    <div class="row" id="credit_card_info">
+                        <div class="col-md-6 mb-3" >
+                            <input type="text" name="" class="form-control custom-from-control custom-input-details"
+                            name="credit_card_number" placeholder="رقم البطاقة" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="number" name="number" class="form-control custom-from-control custom-input-details"
+                            name="credit_card_expiration-month" placeholder="شهر الانتهاء" min="1" max="12" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="number" name="number" class="form-control custom-from-control custom-input-details"
+                            name="credit_card_expiration-year" placeholder="سنة الانتهاء" min="2020" max="2030" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="number" name="number" class="form-control custom-from-control custom-input-details"
+                            name="credit_card_expiration-cvv" placeholder="cvv" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h2 class="heading">طلبك</h2>
                 <table class="custom-table">
                     <thead>
                         <tr>
@@ -202,139 +288,15 @@
                     </tfoot>
                 </table>
                 <button type="submit" class="btn custom-btn-warning custom-btn-with-icom ms-3 mb-4" >
-                            <span>
-                                <a href="payment.html" style="text-decoration:none; color: rgb(19, 9, 4);">
-                                اكمال عملية الشراء
-                                </a>
-                                <i class="fas fa-dollar-sign fa-lg"></i>
-                            </span>
-                        </button>
-            </form>
-        </div>
-        
-                <div class="row">
-            <h3 class="heading">
-                اقترحنا لك
-            </h3>
-            <div class="row">
-                            <div class="col-lg-3 col-md-4">
-                                <div class="card custom-thumbnail">
-                                    <div class="overlay">
-                                        <button class="btn add-to-cart-btn">
-                                            اضافة الى العربة
-                                            <i class="fas fa-cart-plus"></i>
-                                        </button>
-                                    </div>
-                                    <img src="images/most_sold_1.jpg" alt="">
-                                    <div class="card-bode p-2">
-                                        <div class="clearfix">
-                                        <h4 class="float-start">فلورا تي شيرت</h4>
-                                        <div class="price float-end">200$</div>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
-                                        <button class="btn add-to-cart-btn d-block d-lg-none mx-auto">
-                                            اضافة الى العربة
-                                            <i class="fas fa-cart-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="card custom-thumbnail">
-                                    <div class="overlay">
-                                        <button class="btn add-to-cart-btn">
-                                            اضافة الى العربة
-                                            <i class="fas fa-cart-plus"></i>
-                                        </button>
-                                    </div>
-                                    <img src="images/most_sold_2.jpg" alt="">
-                                    <div class="card-bode p-2">
-                                        <div class="clearfix">
-                                        <h4 class="float-start">فلورا تي شيرت</h4>
-                                        <div class="price float-end">200$</div>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-solid fa-star active"></i>
-                                        </div>
-                                        <button class="btn add-to-cart-btn d-block d-lg-none mx-auto">
-                                            اضافة الى العربة
-                                            <i class="fas fa-cart-plus"></i>
-                                        </button>
-                                    </div>
-                                </div> 
-                            </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="card custom-thumbnail">
-                                    <div class="sale ">50%</div>
-                                    <div class="overlay">
-                                        <button class="btn add-to-cart-btn">
-                                            اضافة الى العربة
-                                            <i class="fas fa-cart-plus"></i>
-                                        </button>
-                                    </div>
-                                    <img src="images/most_sold_3.jpg" alt="">
-                                    <div class="card-bode p-2">
-                                        <div class="clearfix">
-                                        <h4 class="float-start">فلورا تي شيرت</h4>
-                                        <div class="price float-end">200$</div>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
-                                        <button class="btn add-to-cart-btn d-block d-lg-none mx-auto">
-                                            اضافة الى العربة
-                                            <i class="fas fa-cart-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 d-none d-lg-block">
-                                <div class="card custom-thumbnail">
-                                    <div class="overlay">
-                                        <button class="btn add-to-cart-btn">
-                                            اضافة الى العربة
-                                            <i class="fas fa-cart-plus"></i>
-                                        </button>
-                                    </div>
-                                    <img src="images/adidas_1.jpg" alt="">
-                                    <div class="card-bode p-2">
-                                        <div class="clearfix">
-                                        <h4 class="float-start">فلورا تي شيرت</h4>
-                                        <div class="price float-end">200$</div>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-solid fa-star active"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
-                                        <button class="btn add-to-cart-btn d-block d-lg-none mx-auto">
-                                            اضافة الى العربة
-                                            <i class="fas fa-cart-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        </div>
-
-        </div>
-
+                    <span>
+                        <a href="payment.html" style="text-decoration:none; color: rgb(19, 9, 4);">
+                        اكمال عملية الشراء
+                        </a>
+                        <i class="fas fa-dollar-sign fa-lg"></i>
+                    </span>
+                </button>
+            </div>
+         </form>
         </div>
 
         <!-- بداية الفوتر -->
@@ -365,7 +327,7 @@
                             تواصل معنا
                         </a>
                     </div>
-                    <div class="newsletter col-md-6 offset-md-3 d-flex align-items-center justify-content-center">
+                    <div class="newsletter col-md-6 mb-3 offset-md-3 d-flex align-items-center justify-content-center">
                         <form>
                             <label for="footer-input">تابع النشرة البريدية لاحدث العروض</label>
                         <br>
@@ -398,8 +360,6 @@
                 </div>
                </footer>
                <!-- نهايةالفوتر -->
-    </div>
-    
 
     <script src="index.js"></script>
 </body>
