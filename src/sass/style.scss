@@ -1,0 +1,74 @@
+
+@import './variables';
+@import './custom_table';
+@import './mixins';
+@import './_custom_thumbnail';
+
+
+.custom-form-control, .dropdown a.custom-btn {
+    border: 1px solid #EBEBEB;
+    box-shadow: none !important;
+    border-radius: 2px;
+    color: #868686;
+    height: 38px;
+    padding: 6px 16px 7px;
+    transition: 0.3s all ease;
+}
+.custom-form-control:focus {
+    border-color: $btn-danger-color-dark;
+    box-shadow: 0 0 2px 0 $btn-danger-color-dark ;
+}
+
+.dropdown a.custom-btn:hover {
+    background-color: #d4d4d4;
+    border: 2px solid #8c8c8c;
+    color: $brand-danger;
+}
+.dropdown a.custom-btn:focus {
+    color: $brand-danger;
+}
+
+
+.custom-btn-outline-warning {
+
+    background-color: transparent;
+    border-color: $brand-warning;
+    color: $brand-warning;
+}
+
+.custom-btn-outline-warning {
+    @include button-style($brand-warning)
+}
+
+.custom-btn-outline-danger {
+    @include button-style($brand-danger)
+}
+
+
+.custom-btn-warning {
+    color: #000;
+    background-color: $brand-warning;
+    border-color: $brand-warning;
+}
+
+.custom-btn-waring:hover,
+.custom-btn-waring:active,
+.custom-btn-waring:focus,
+.custom-btn-waring:active:focus,
+.custom-btn-waring:active:hover
+ {
+    background-color: $btn-warning-color-dark;
+    border-color: $btn-warning-color-dark;
+ }
+
+ 
+.custom-btn-outline-danger:hover {
+    border-color: $btn-danger-color-dark;
+    color: $btn-danger-color-dark;
+}
+
+.add-to-cart-btn {
+    background-color: #fff;
+    color: $brand-primary;
+    font-weight: 700;
+}

@@ -35,8 +35,8 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        exclude: /bootstrap\.min\.css$/i,
+        test: /\.(sa|sc|c)ss$/i,
+        exclude: /custom\.scss$/i,
         use: [
             
             {
@@ -46,10 +46,11 @@ module.exports = {
                 },
             }
             ,
-             "css-loader"],
+             "css-loader",
+             "sass-loader"],
       },
       {
-        test:/bootstrap\.min\.css$/i,
+        test:/custom\.scss$/i,
         use:[
             {
                 loader: MiniCssExtractPlugin.loader,
@@ -57,7 +58,8 @@ module.exports = {
                     esModule: false,
                 },
             },
-            'rtlcss-loader'
+            'rtlcss-loader',
+            'sass-loader'
         ]
       },
         {
@@ -98,9 +100,15 @@ module.exports = {
         filename: "search.html",
         template: "./src/search.html"
     }),
+    new HtmlWebpackPlugin({
+        filename: "contact.html",
+        template: "./src/contact.html"
+    }),
     new MiniCssExtractPlugin({
         filename: "css/style.css"
     }),
-    new CssMinimizerPlugin()
+    new CssMinimizerPlugin(),
+
+    
   ]
 };

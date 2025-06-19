@@ -21,28 +21,7 @@ body {
     background-color: #fff;
     padding: 15px 0px;
 }
-.custom-from-control, .dropdown a.custom-btn {
-    border: 1px solid #EBEBEB;
-    box-shadow: none !important;
-    border-radius: 2px;
-    color: #868686;
-    height: 38px;
-    padding: 6px 16px 7px;
-    transition: 0.3s all ease;
-}
-.custom-from-control:focus {
-    border-color: #c2101E;
-    box-shadow: 0 0 2px 0 #c2101E ;
-}
 
-.dropdown a.custom-btn:hover {
-    background-color: #d4d4d4;
-    border: 2px solid #8c8c8c;
-    color: #ff3956;
-}
-.dropdown a.custom-btn:focus {
-    color: #ff3956;
-}
 .dropdown a.custom-btn {
     border-right: 0 !important;
     border-radius: 0;
@@ -101,59 +80,10 @@ body {
     font-size: 14px;
     margin-right: 15px;
 }
-/* 
-ul.navbar-nav {
-    margin-right: auto;
-} */
 
 /* قسم عرض الشرائح */
-#carousel-featured {
-    background-color: #f7f8f3;
-    height: 400px;
-    padding-top: 25px;
-}
-#carousel-featured .carousel-item img {
-    height: 375px;
-
-}
-#carousel-featured .product-details {
-    border: 1px solid #DDDDDB;
-    padding: 20px;
-    position: relative;
-    top: 50px;
-    height: 200px;
-    background-color: #f7f8f3;
-}
-#carousel-featured .product-details h1 {
-    font-weight: 700;
-    font-size: 175%;
-    margin-top: 18px;
-}
-#carousel-featured .product-details  .product-category {
-    border: 1px solid #DDDDDB;
-    padding: 10px;
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    background-color: #f7f8f3;
-}
 
 
-.custom-btn-outline-warning {
-
-    background-color: transparent;
-    border-color: #f8ad47;
-    color: #f8ad47;
-}
-
-.custom-btn-outline-warning:hover,
-.custom-btn-outline-warning:active,
-.custom-btn-outline-warning:focus,
-.custom-btn-outline-warning:active:focus,
-.custom-btn-outline-warning:active:hover {
-    border-color: #b86d07;
-    color: #b86d07;
-}
 
 .sale { 
     background-color: #53ccd7;
@@ -225,24 +155,7 @@ ul.navbar-nav {
     font-size: 24px;
     margin-bottom: 25px;
 }
-.custom-thumbnail img {
-    max-height: 250px;
-    width: 100%;
-    max-width: 250px;
-}
-.custom-thumbnail {
-    border: 2px solid #eef0ea;
-    padding: 8px;
-    cursor: pointer;
-    margin-bottom: 50px;
-}
-.custom-thumbnail:hover {
-    border-color: #53ccd7;
-}
-.custom-thumbnail h4 {
-    font-size: 18px;
 
-}
 .price {
     color: #53ccd7;
 }
@@ -268,11 +181,7 @@ ul.navbar-nav {
     opacity: 1;
 }
 
-.add-to-cart-btn {
-    background-color: #fff;
-    color: #53ccd7;
-    font-weight: 700;
-}
+
 .custom-thumbnail .sale {
     padding: 5px 10px;
     position: absolute;
@@ -374,20 +283,6 @@ ul.navbar-nav {
     border: none;
     height: 38px;
 }
-.custom-btn-warning {
-    color: #000;
-    background-color: #f8ad47;
-    border-color: #f8ad47;
-}
-.custom-btn-waring:hover,
-.custom-btn-waring:active,
-.custom-btn-waring:focus,
-.custom-btn-waring:active:focus,
-.custom-btn-waring:active:hover
- {
-    background-color: #b86d07;
-    border-color: #b86d07;
- }
  .newsletter form button {
     border-radius: 0;
     border-top-left-radius: 3px;
@@ -528,33 +423,10 @@ ul.navbar-nav {
     margin-left: 10px;
 
 }
-.custom-table th,
-.custom-table td {
-    padding: 15px;
-    font-size: 120%;
-    vertical-align: middle;
-    border-bottom: 1px solid #ebebeb;
-    border-top: 1px solid #ebebeb;
-}
-.custom-table h4 {
-    font-size: 18px;
-    margin: 12px 0px;
-}
-.custom-table th {
-    color: #c2c2c2;
-    font-weight: normal;
+#total-price-for-all-product {
+    color: #000;
 }
 
-
-
-.custom-table th:first-child,
-.custom-table td:first-child {
-    width: 50%;
-}
-.custom-table th:not(:first-child),
-.custom-table td:not(:first-child) {
-    text-align: center;
-}
 .custom-heading {
     font-size: 36px;
     margin-bottom: 25px;
@@ -564,23 +436,6 @@ ul.navbar-nav {
     font-size: 36px;
     margin-bottom: 25px;
 }
-.custom-table tfoot td {
-    border-bottom: none;
-    font-size: 150%;
-}
-#total-price-for-all-product {
-    color: #000;
-}
-.custom-btn-outline-danger {
-    background-color: transparent;
-    border-color: #ff3956;
-    color: #ff3956;
-}
-.custom-btn-outline-danger:hover {
-    border-color: #b9001b;
-    color: #b9001b;
-}
-
 /*بداية صفحة الدفع */
 
 .custom-input-details {
@@ -594,18 +449,6 @@ ul.navbar-nav {
 
  /* بداية صفحة البحث */
 
- #form-advanced-search {
-    border: 1px solid #ebebeb;
-    padding-bottom: 20px;
-    margin-bottom: 35px;
-    height: fit-content;
-
- }
-
- #form-advanced-search .panel {
-    border: none;
-    padding: 5px;
- }
  .panel .card-header {
     background-color: transparent;
     margin-bottom: 15px;
@@ -618,10 +461,7 @@ ul.navbar-nav {
     border-bottom: 1px solid #ebebeb;
   }
 
-  #form-advanced-search label {
-    font-weight: bold;
-    cursor: pointer;
-  }
+
 
   .custom-pagination .page-link {
     margin-left: 3px !important;
@@ -647,6 +487,26 @@ ul.navbar-nav {
         background-color: #fff !important;
         border-color: #f8ad47 !important;
     }
+
+    /* ----- */
+   #map {
+    padding: 0;
+}
+
+#contact-options h4 {
+    font-size: 18px;
+}
+
+#contact-info .fa-lg {
+    color: #f3af41;
+    margin: 10px 0px 0px 10px;
+}
+
+#contact-options textarea {
+    height: 105px !important;
+}
+
+
  
 
  @media (max-width: 1399.98px) { 
@@ -665,6 +525,15 @@ ul.navbar-nav {
         text-align: center;
         margin: 0 50px;
     }
+    #form-subscription {
+        margin-bottom: 25px;
+    }
+
+    #contact-options input[name=name]
+    {
+        margin-bottom: 15px;
+    }
+ 
     
     
  }
@@ -769,12 +638,7 @@ ul.navbar-nav {
     #carousel-featured  .carousel-item img {
         height: 250px;
     }
-    .custom-thumbnail img {
-        height: 250px;
-    }
-    #carousel-most-solid-altrenative .custom-thumbnail img {
-        margin: auto;
-    }
+    
     #brand-logos img {
         max-width: 50px;
         max-height: 50px;
@@ -803,10 +667,7 @@ ul.navbar-nav {
     }
  }
  @media (max-width: 767.98px) and (max-width: 991.98px) {
-    .custom-thumbnail img {
-        height: 200px;
 
-    }
     #brand-logo .img-container {
         margin: 5px 15px;
         
